@@ -5,13 +5,13 @@ import Form from './Components/Form';
 import ToDoList from './Components/ToDoList';
 
 function App() {
-  const [inputText, setInputText] = ("");
+  const [inputText, setInputText] = useState("");
   return (
     <div className="App">
       <header>
         <h1>Gretchen's To Do List</h1>
       </header>
-      <Form />
+      <Form setInputText={setInputText}/>
       <ToDoList />
     </div>
   );
