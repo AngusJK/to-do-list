@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Form = () => {
+const Form = ({ setInputText }) => {
   const inputTextHandler = (e) => {
-    console.log(e);
-  }
+    setInputText(e.target.value);
+  };
   return (
     <form>
       <input onChange={inputTextHandler} type="text" className="todo-input" />
@@ -19,7 +19,7 @@ const Form = () => {
       </div>
     </form>
   );
-}
+};
 
 export default Form;
 
