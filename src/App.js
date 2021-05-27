@@ -1,13 +1,15 @@
+import React, { useState } from 'react';
 import './App.css';
 
 import Form from './Components/Form';
 import ToDoList from './Components/ToDoList';
 
 function App() {
+  const [inputText, setInputText] = ("");
   return (
     <div className="App">
       <header>
-        <h1>Stephan's To Do List</h1>
+        <h1>Gretchen's To Do List</h1>
       </header>
       <Form />
       <ToDoList />
