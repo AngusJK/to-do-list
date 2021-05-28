@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ToDo = () => {
+const ToDo = ({ text }) => {
   return (
     <div className="todo">
-      <li className="todo-item">Hey ya</li>
+      <li className="todo-item">{ text }</li>
       <button className="complete-btn">
         <i className="fas fa-check"></i>
       </button>
