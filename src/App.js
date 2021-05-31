@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 import Form from './Components/Form';
@@ -22,6 +22,9 @@ function App() {
         break;
     }
   }
+  useEffect(() => {
+    filterHandler();
+  }, [todos, status]);
   return (
     <div className="App">
       <header>
@@ -33,10 +36,12 @@ function App() {
         inputText={inputText} 
         setInputText={setInputText}
         setStatus={setStatus}
+        
       />
       <ToDoList 
         todos={todos} 
         setTodos={setTodos}
+        filteredTodos={filteredTodos}
       />
     </div>
   );
