@@ -22,13 +22,35 @@ function App() {
         break;
     }
   }
+
+  useEffect(() => {
+    getLocalTodos();
+  }, []);
+
   useEffect(() => {
     filterHandler();
+    saveLocalTodos();
   }, [todos, status]);
+
+  // Save to local
+
+  const saveLocalTodos = () => {
+      localStorage.setItem('todos', JSON.stringify(todos));
+  }
+
+  const getLocalTodos = () => {
+    if(localStorage.getItem('todos') === null) {
+      localStorage.setItem('todos', JSON.stringify([]));
+    } else {
+      let todoLocal = JSON.parse(localStorage.getItem('todos'));
+      setTodos(todoLocal);
+    }
+  }
+
   return (
     <div className="App">
       <header>
-        <h1>Gretchen's To Do List</h1>
+        <h1>Angus' To Do List</h1>
       </header>
       <Form 
         todos={todos} 
