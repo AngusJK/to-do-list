@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-  color: white;
+  background-image: linear-gradient(180deg, #abd9df 0%, #155ea1 100%);
+  color: rgb(27, 7, 83);
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
 }
@@ -94,6 +94,7 @@ form button:hover {
 .completed {
   text-decoration: line-through;
   opacity: 0.5;
+  background-color: rgb(75, 165, 224);
 }
 
 /*CUSTOM SELECTOR */
